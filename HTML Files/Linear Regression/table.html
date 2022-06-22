@@ -52,7 +52,7 @@ tr:nth-child(odd) {
 tr:first-child {
     background-color: #363636;
     color: white;
-    box-shadow: 0 7px 10px #888888;
+    box-shadow: 0 -3px 10px 10px #727272;
 }
 
 table {
@@ -69,6 +69,11 @@ tr > th:last-child, tr > td:last-child {
 }
 
 tr > th {
+    border-top: 0;
+    border-bottom: 0;
+}
+
+* > tr:nth-child(2) > td {
     border-top: 0;
 }
 
