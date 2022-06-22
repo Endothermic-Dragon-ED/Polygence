@@ -1,0 +1,1 @@
+f(\theta, x) = \theta_1x_1^2 + \theta_2x_1 + \theta_3x_2 + \theta_4x_1x_2 + \theta_5
