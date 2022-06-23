@@ -1,17 +1,21 @@
 import os
 from glob import glob
 import shutil
+import re
 
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
-shutil.rmtree("build")
+try:
+    shutil.rmtree("build")
+except Exception:
+    print("Folder not found, continuing...")
 
 inputs = [y for x in os.walk("src") for y in glob(os.path.join(x[0], '*.txt'))]
 SVGoutputs = [f"build{i[3:-3]}svg" for i in inputs]
 PNGoutputs = [f"build{i[3:-3]}png" for i in inputs]
 
 for i in range(len(inputs)):
-    os.makedirs("/".join(SVGoutputs[i].split("\\")[:-1]), exist_ok=True)
+    os.makedirs("/".join(re.split(r"[\\/]", SVGoutputs[i])[:-1]), exist_ok=True)
     open(SVGoutputs[i],'a+').close()
 
     open(SVGoutputs[i],'a+').close()

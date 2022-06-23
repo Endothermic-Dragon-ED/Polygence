@@ -60,4 +60,5 @@ def renderTangentGraph():
     plt.axis('off')
     plt.savefig("output/tangent.png", bbox_inches='tight')
     plt.show()
+
 renderTangentGraph()
