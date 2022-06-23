@@ -1,0 +1,1 @@
+\frac{\partial}{\partial x_2} f(x_1, x_2)

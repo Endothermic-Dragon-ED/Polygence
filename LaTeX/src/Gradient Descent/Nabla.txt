@@ -1,0 +1,6 @@
+\nabla f(x_1, x_2, \cdots, x_n) = \begin{bmatrix}
+\frac{\partial f(x_1, x_2, \cdots, x_n)}{\partial x_1}\\
+\frac{\partial f(x_1, x_2, \cdots, x_n)}{\partial x_2}\\
+\vdots\\
+\frac{\partial f(x_1, x_2, \cdots, x_n)}{\partial x_n}
+\end{bmatrix}
