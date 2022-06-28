@@ -1,0 +1,1 @@
+\gamma_n=\frac{\lvert (x_n-x_{n-1})^T[\nabla F(x_n) - \nabla F(x_{n-1})] \rvert}{\lVert \nabla F(x_n) - \nabla F(x_{n-1}) \rVert ^2}

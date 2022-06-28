@@ -1,1 +1,1 @@
-J(θ) = \frac{1}{n} \sum_{i=1}^n (f(θ, xi) - yi)^2
+J(θ) = \frac{1}{n} \sum_{i=1}^n (f(θ, x_i) - y_i)^2
