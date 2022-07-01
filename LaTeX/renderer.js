@@ -28,7 +28,7 @@ async function render(latex){
     //
     //  The default TeX packages to use
     //
-    const PACKAGES = 'base, autoload, require, ams, newcommand, textmacros';
+    const PACKAGES = 'base, autoload, require, ams, newcommand, textmacros, color';
 
     //
     //  Get the command-line arguments
@@ -90,13 +90,15 @@ async function render(latex){
             paths: {mathjax: 'mathjax-full/es5'},
             source: (argv.dist ? {} : require('mathjax-full/components/src/source.js').source),
             require: require,
-            load: ['adaptors/liteDOM', '[tex]/textmacros']
+            load: ['adaptors/liteDOM', '[tex]/textmacros', '[tex]/color']
         },
         tex: {
             packages: argv.packages.replace('\*', PACKAGES).split(/\s*,\s*/)
         },
         svg: {
-            fontCache: (argv.fontCache ? 'local' : 'none')
+            fontCache: (argv.fontCache ? 'local' : 'none'),
+            mtextInheritFont: false,
+            mtextFont: ["STIX General"]
         },
         startup: {
             typeset: false
