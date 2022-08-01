@@ -3,11 +3,16 @@ const xmlserializer = require('xmlserializer');
 
 const source = process.argv[2]
 const output = process.argv[3]
-const scale = 15
+let scale = 15
 
 async function latexToSVG(){
   let { render } = require("./renderer.js");
   let latex = fs.readFileSync(source, 'utf8', (_, data) => data);
+  let settingsBreak = latex.split("settings-width:")
+  if (settingsBreak.length > 1){
+    latex = settingsBreak[0]
+    scale = parseFloat(settingsBreak[1])
+  }
   console.log("------------------------------------------------------------")
   console.log(latex)
 

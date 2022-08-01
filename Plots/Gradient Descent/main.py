@@ -95,13 +95,11 @@ def renderCusp():
     inputs = np.linspace(-3, 3, 1000)
 
     outputs = np.abs(inputs)
-    
-    x = [0] 
-    y = [0]
 
+    plt.figure(figsize=(6.4*2/3, 4.8*2/3))
     plt.plot(inputs, outputs, "k", linewidth=7.5, solid_capstyle='round', zorder=1)
-    plt.scatter(x, y, s=1000, facecolors='none', edgecolors='r', zorder=2, linewidths=3)
-    plt.axis([-3.1, 3.1, -0.3, 3.1])
+    plt.scatter([0], [0], s=1000, facecolors='none', edgecolors='r', zorder=2, linewidths=4)
+    plt.axis([-3.1, 3.1, -0.5, 3.1])
     plt.axis('off')
     plt.savefig("output/cusp.png", bbox_inches='tight')
     plt.show()
@@ -111,13 +109,14 @@ def renderQuadratic():
 
     outputs = inputs**2
 
-    tangentLine = -inputs*6 - 9
+    tangentLine = inputs*6 - 9
 
+    plt.figure(figsize=(6.4*2/3, 4.8*2/3))
     plt.plot(inputs, outputs, "k")
     plt.plot(inputs, tangentLine, "r")
     plt.axis([-5, 5, -0.1, 20])
     plt.axis('off')
-    plt.savefig("output/negative-slope.png", bbox_inches='tight')
+    plt.savefig("output/positive-slope.png", bbox_inches='tight')
     plt.show()
 
 def renderHyperplane2D():
@@ -127,6 +126,7 @@ def renderHyperplane2D():
 
     tangentLine = -2*inputs
 
+    plt.figure(figsize=(6.4*2/3, 4.8*2/3))
     plt.plot(inputs, outputs, "k")
     plt.plot(inputs, tangentLine, "r")
     plt.axis([-2.5, 0.5, 0, 4])
@@ -135,6 +135,7 @@ def renderHyperplane2D():
     plt.show()
 
 def renderHyperplane3D():
+    plt.figure(figsize=(6.4*2/3, 4.8*2/3))
     ax = plt.axes(projection='3d')
 
     def f(x, y):
@@ -178,4 +179,5 @@ def renderVector():
     plt.savefig("output/vector.png", bbox_inches='tight')
     plt.show()
 
-renderVector()
+renderHyperplane2D()
+renderHyperplane3D()
