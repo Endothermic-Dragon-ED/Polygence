@@ -5,7 +5,7 @@ import re
 
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
-sourceSubDir = "Gradient Descent"
+sourceSubDir = "Training Faster and Better"
 
 try:
     shutil.rmtree("build" + (f"/{sourceSubDir}" if sourceSubDir else ""))
