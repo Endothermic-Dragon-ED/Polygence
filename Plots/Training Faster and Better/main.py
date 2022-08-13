@@ -17,4 +17,15 @@ def renderBellCurve():
     plt.savefig("output/bell-curve.png", bbox_inches='tight')
     plt.show()
 
-renderBellCurve()
+def binomDist():
+    randomDist = np.random.binomial(100, 0.5, 10000)/10
+    plt.hist(np.e**randomDist, 15)
+    plt.title("Before Log Scaling")
+    plt.savefig("output/post-log-scaling.png", bbox_inches='tight')
+    plt.show()
+    plt.hist(randomDist, 15)
+    plt.title("After Log Scaling")
+    plt.savefig("output/pre-log-scaling.png", bbox_inches='tight')
+    plt.show()
+
+binomDist()
