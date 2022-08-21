@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Regression - Example House Data</title>
+    <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+MathJax = {
+    tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+};
+    </script>
+    <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <link rel="stylesheet" href="../fonts/Roboto/Roboto.css">
+    <style>
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+body {
+    padding: 30px;
+    text-align: center;
+    display: inline-block;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+th, td {
+  border: 1px solid #b3b3b3;
+  padding: 10px 12px;
+}
+
+.boolean-label, .type-label {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 17px;
+    color: white;
+}
+
+.boolean-label {
+    background-color: #363636;
+    /*box-shadow: 0 -3px 10px 10px #727272;*/
+}
+
+.type-label {
+    background-color: #6e6e6e;
+}
+
+.vertical th {
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+}
+
+.vertical th span {
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+tr:nth-child(even) {
+    background-color: #ededed;
+}
+
+tr > *:last-child {
+    border-right: none;
+}
+
+tr > *:first-child {
+    border-left: none;
+}
+
+tr:first-child > * {
+    border-top: none;
+}
+
+tr:last-child > * {
+    border-bottom: none;
+}
+
+.vertical th:first-child {
+    border-bottom: none;
+}
+
+.shadow-1 {
+    box-shadow: inset 17px 17px 10px -10px #727272;
+}
+
+.shadow-2 {
+    box-shadow: inset 0 17px 10px -10px #727272;
+}
+
+.shadow-3 {
+    box-shadow: inset 17px 0 10px -10px #727272;
+}
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="2" rowspan="2" class="empty-cell"></td>
+            <th colspan="2" class="type-label">Actual</th>
+        </tr>
+        <tr>
+            <th class="boolean-label">True</th>
+            <th class="boolean-label">False</th>
+        </tr>
+        <tr class="vertical">
+            <th rowspan="2" class="type-label"><span>Predicted</span></th>
+            <th class="boolean-label"><span>True</span></th>
+            <td class="shadow-1">$2$</td>
+            <td class="shadow-2">$17$</td>
+        </tr>
+        <tr class="vertical">
+            <th class="boolean-label"><span>False</span></th>
+            <td class="shadow-3">$23$</td>
+            <td>$58$</td>
+        </tr>
+    </table>
+</body>
+</html>
