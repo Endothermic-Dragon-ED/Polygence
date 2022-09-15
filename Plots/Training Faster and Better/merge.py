@@ -1,3 +1,4 @@
+# Merge log scaling images
 import os
 from PIL import Image
 

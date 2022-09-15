@@ -64,4 +64,4 @@ def renderVarianceGraph():
     plt.savefig("output/variance.png", bbox_inches='tight')
     plt.show()
 
-renderVarianceGraph()
+# Render via running the appropriate function

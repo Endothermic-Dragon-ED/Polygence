@@ -1,3 +1,4 @@
+# Merge hyperplane images
 import os
 from PIL import Image
 

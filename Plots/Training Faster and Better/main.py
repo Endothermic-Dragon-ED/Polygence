@@ -28,4 +28,4 @@ def binomDist():
     plt.savefig("output/pre-log-scaling.png", bbox_inches='tight')
     plt.show()
 
-binomDist()
+# Render via running the appropriate function

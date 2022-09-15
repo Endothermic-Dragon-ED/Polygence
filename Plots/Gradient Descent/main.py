@@ -163,21 +163,4 @@ def renderHyperplane3D():
     plt.savefig("output/hyperplane-3D.png", bbox_inches='tight', dpi=130)
     plt.show()
 
-def renderVector():
-    inputs = np.linspace(-2.5, 0.5, 1000)
-
-    outputs = inputs**3 + 3*inputs**2 + inputs + 1
-
-    tangentLine = -2*inputs
-
-    plt.plot([2,1.95], [3,2.75], "k")
-    plt.plot([2,1.75], [3,2.95], "k")
-    plt.plot([2,0], [3,0], "k")
-    plt.plot([2,0], [0,0], "r")
-    plt.axis([-0.1, 3.1, -0.1, 3.1])
-    plt.axis('off')
-    plt.savefig("output/vector.png", bbox_inches='tight')
-    plt.show()
-
-renderHyperplane2D()
-renderHyperplane3D()
+# Render via running the appropriate function

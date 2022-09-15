@@ -34,8 +34,7 @@ def sigmoid():
     plt.vlines(0, 0, 0.5, "r", linestyle="dashed")
     plt.hlines(0.5, -7.5, 0, "r", linestyle="dashed")
     plt.plot(0, 0.5, "ro")
-    # plt.axis('off')
     plt.savefig("output/sigmoid.png", bbox_inches='tight')
     plt.show()
 
-sigmoid()
+# Render via running the appropriate function
